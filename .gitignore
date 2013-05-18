@@ -1,6 +1,46 @@
-*.class
+/*
+java中的继承小结
+*/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+class Student  extends Worker
+{
+  String name = "zhangsan";
+	int age = 21;
+	void study()
+	{
+		System.out.println(super.name);
+    }
+}
+class Worker
+{
+	String name = "lisi";
+	int age = 43;
+	void work()
+	{
+		System.out.println("work good");
+	}
+}
+class  Jicheng
+{
+	public static void main(String[] args) 
+	{
+
+		Student s = new Student();
+		s.study();
+		Worker w = new Worker();
+		w.work();
+		Fu z = new Fu(4);
+		System.out.println(z.num);
+		System.out.println(s.name+"..."+w.name);
+	}
+}
+ class Fu
+ {
+	 int num ;
+	 Fu(int x)
+	 {
+		 num = 60;
+		System.out.println("fu run = "+x);
+	 }
+	
+ }
